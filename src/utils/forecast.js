@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, "The Observation time for this forecast is " +body.current.observation_time +"\n"+ body.current.weather_descriptions[0]+ '.\tIt is currently ' + body.current.temperature + " degress out. \nIt's feels like" + body.current.feelslike + 'degress out.\n'+ "Now the humidity is\t"+body.curent.humidity + "%.");
+            callback(undefined, "The Observation time for this forecast is " + body.current.observation_time +"\n"+ body.current.weather_descriptions[0] + '.\tIt is currently ' + body.current.temperature + " degress out. \nIt's feels like " + 
+            body.current.feelslike + ' degress out.\n'+ "Now the humidity is " + body.current.humidity + "%.");
         }
     })
 }
